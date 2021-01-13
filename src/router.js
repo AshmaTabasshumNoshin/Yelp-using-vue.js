@@ -14,7 +14,7 @@ const routes = [
   { path: '/Login', component: LoginPage,},
   { path: '/dashboard',
     component: DashboardPage,
-    beforeEnter (to, from, next) {
+    beforeEnter (_to, _from, next) {
       if(store.state.idToken) {
         next()
       }else{
